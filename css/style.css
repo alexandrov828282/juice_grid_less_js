@@ -1,22 +1,30 @@
 body {
   font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
 }
 .container {
   background: radial-gradient(#fdfefe, #ccdef0);
 }
 .grid {
   display: grid;
+  font-size: 18px;
   max-width: 1200px;
   margin: 0 auto;
   min-height: 100vh;
-  grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
-  grid-template-columns: 5fr, 7fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 5fr 7fr;
   grid-gap: 1px;
   grid-template-areas: "logo     nav" "title    image" "content  image" "button   image" "social   image" "footer   footer";
 }
 .logo {
   grid-area: logo;
   background-color: rgba(0, 0, 0, 0.1);
+  font-size: 28px;
+  font-weight: 900;
+}
+.logo span {
+  color: #5abb33;
 }
 .nav {
   grid-area: nav;
@@ -32,7 +40,6 @@ body {
 .content {
   grid-area: content;
   background-color: rgba(0, 0, 0, 0.1);
-  max-width: 500px;
 }
 .button {
   grid-area: button;
