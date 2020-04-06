@@ -1,6 +1,45 @@
 .container {
-    grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
-    grid-template-columns: 1fr, 1fr;
-    grid-gap: 1px;
-    grid-template-areas: "logo         navi" "title        image" "text         image" "button       image" "social-icon  image" "footer       footer";
+  background-color: #12afec;
+}
+.grid {
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  grid-template-rows: 100px, 100px, 100px, 100px, 100px, 100px;
+  grid-template-columns: 100px, 100px;
+  grid-gap: 2px;
+  grid-template-areas: "logo     nav" "title    image" "content  image" "button   image" "social   image" "footer   footer";
+}
+.logo {
+  grid-area: logo;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.nav {
+  grid-area: nav;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.title {
+  grid-area: title;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.content {
+  grid-area: content;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.button {
+  grid-area: button;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.social {
+  grid-area: social;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.image {
+  grid-area: image;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.footer {
+  grid-area: footer;
+  background-color: rgba(0, 0, 0, 0.1);
 }
