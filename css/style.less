@@ -2,10 +2,13 @@
 @color-black: #000;
 @color-gold-light: #fadb60;
 @color-gold-dark: #ffcc00;
+@auxiliary_background: rgba(0, 0, 0, 0.1);
+
 @fontweight-medium: 500;
 @fontweight-bold: 700;
 @fontweight-extrabold: 800;
 @fontweight-black: 900;
+
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -16,7 +19,6 @@ body {
 
 .container {
     background: radial-gradient(#fdfefe, #ccdef0);
-    // font-size: 18px;
 }
 
 .grid {
@@ -41,9 +43,8 @@ body {
 
 .logo {
     grid-area: logo;
-    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid @auxiliary_background;
     font-size: 28px;
-    // font-size: 1.56em;
     font-weight: @fontweight-black;
 
     span {
@@ -53,14 +54,14 @@ body {
 
 .nav {
     grid-area: nav;
-    background-color: rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
+    border: 1px solid @auxiliary_background;
 }
 
 .title {
     grid-area: title;
-    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid @auxiliary_background;
     display: inline-block;
     margin: 0;
     font-size: 47px;
@@ -69,30 +70,36 @@ body {
 
 .content {
     grid-area: content;
-    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid @auxiliary_background;
     font-size: 20px;
     line-height: 1.7;
 }
 
-.button {
+.block-button {
     grid-area: button;
-    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid @auxiliary_background;
     font-size: 24px;
     font-weight: @fontweight-bold;
 }
 
+.button {
+    display: inline-block;
+    background: linear-gradient(180deg, @color-gold-light, @color-gold-dark);
+    padding: 23px 34px;
+    border-radius: 50px;
+}
+
 .social {
     grid-area: social;
-    background-color: rgba(0, 0, 0, 0.1);
-    // max-width: 500px;
+    border: 1px solid @auxiliary_background;
 }
 
 .image {
     grid-area: image;
-    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid @auxiliary_background;
 }
 
 .footer {
     grid-area: footer;
-    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid @auxiliary_background;
 }

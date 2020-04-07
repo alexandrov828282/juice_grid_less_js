@@ -20,7 +20,7 @@ body {
 }
 .logo {
   grid-area: logo;
-  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 28px;
   font-weight: 900;
 }
@@ -29,13 +29,13 @@ body {
 }
 .nav {
   grid-area: nav;
-  background-color: rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .title {
   grid-area: title;
-  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   display: inline-block;
   margin: 0;
   font-size: 47px;
@@ -43,25 +43,31 @@ body {
 }
 .content {
   grid-area: content;
-  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 20px;
   line-height: 1.7;
 }
-.button {
+.block-button {
   grid-area: button;
-  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 24px;
   font-weight: 700;
 }
+.button {
+  display: inline-block;
+  background: linear-gradient(180deg, #fadb60, #ffcc00);
+  padding: 23px 34px;
+  border-radius: 50px;
+}
 .social {
   grid-area: social;
-  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .image {
   grid-area: image;
-  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .footer {
   grid-area: footer;
-  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
