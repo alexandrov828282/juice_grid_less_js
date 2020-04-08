@@ -10,28 +10,42 @@ body {
 .grid {
   display: grid;
   font-size: 18px;
-  max-width: 1200px;
+  max-width: 1290px;
   margin: 0 auto;
   min-height: 100vh;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-columns: 5fr 7fr;
+  grid-template-rows: 117px 229px 163px 104px auto 112px;
+  grid-template-columns: 48px 5fr 7fr 48px;
   grid-gap: 1px;
-  grid-template-areas: "logo     nav" "title    image" "content  image" "button   image" "social   image" "footer   footer";
+  grid-template-areas: "indent-left   logo     nav     indent-right" "indent-left   title    image   indent-right" "indent-left   content  image   indent-right" "indent-left   button   image   indent-right" "indent-left   social   image   indent-right" "indent-left   footer   footer  indent-right";
+}
+.indent-left .indent-right {
+  grid-area: indent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 45px;
+  height: auto;
 }
 .logo {
   grid-area: logo;
   border: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 28px;
   font-weight: 900;
+  justify-self: start;
+  align-self: end;
 }
 .logo span {
   color: #5abb33;
 }
 .nav {
+  justify-self: end;
   grid-area: nav;
   display: flex;
+  min-width: 564px;
   justify-content: space-between;
+  align-items: flex-end;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.nav p {
+  margin: 0px;
 }
 .title {
   grid-area: title;
@@ -39,6 +53,7 @@ body {
   display: inline-block;
   margin: 0;
   font-size: 47px;
+  align-self: end;
   font-weight: 800;
 }
 .content {
@@ -46,12 +61,16 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 20px;
   line-height: 1.7;
+  justify-self: start;
+  align-self: end;
 }
 .block-button {
   grid-area: button;
   border: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 24px;
   font-weight: 700;
+  justify-self: start;
+  align-self: end;
 }
 .button {
   display: inline-block;
@@ -62,12 +81,24 @@ body {
 .social {
   grid-area: social;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  justify-self: start;
+  align-self: end;
+}
+.social img {
+  margin-right: 30px;
 }
 .image {
   grid-area: image;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  justify-self: start;
+  align-self: end;
+  margin-top: 30px;
 }
 .footer {
   grid-area: footer;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  justify-self: stretch;
+  align-self: stretch;
+  background-color: #111;
+  color: #fff;
 }
