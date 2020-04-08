@@ -5,18 +5,21 @@ body {
   color: #000;
 }
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: radial-gradient(#fdfefe, #ccdef0);
+  min-height: 100vh;
 }
 .grid {
   display: grid;
   font-size: 18px;
   max-width: 1290px;
   margin: 0 auto;
-  min-height: 100vh;
-  grid-template-rows: 117px 229px 163px 104px auto 112px;
+  grid-template-rows: 117px 229px 163px 104px auto;
   grid-template-columns: 48px 5fr 7fr 48px;
   grid-gap: 1px;
-  grid-template-areas: "indent-left   logo     nav     indent-right" "indent-left   title    image   indent-right" "indent-left   content  image   indent-right" "indent-left   button   image   indent-right" "indent-left   social   image   indent-right" "indent-left   footer   footer  indent-right";
+  grid-template-areas: "indent-left   logo     nav     indent-right" "indent-left   title    image   indent-right" "indent-left   content  image   indent-right" "indent-left   button   image   indent-right" "indent-left   social   image   indent-right";
 }
 .indent-left .indent-right {
   grid-area: indent;
@@ -86,6 +89,7 @@ body {
 }
 .social img {
   margin-right: 30px;
+  margin-bottom: 30px;
 }
 .image {
   grid-area: image;
@@ -95,10 +99,24 @@ body {
   margin-top: 30px;
 }
 .footer {
+  display: flex;
   grid-area: footer;
   border: 1px solid rgba(0, 0, 0, 0.1);
   justify-self: stretch;
   align-self: stretch;
   background-color: #111;
   color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  height: 112px;
+  justify-content: center;
+  align-content: center;
+}
+.footer p {
+  justify-content: center;
+  align-content: center;
+  margin: 47px 0;
+}
+.footer span {
+  color: #fada50;
 }
