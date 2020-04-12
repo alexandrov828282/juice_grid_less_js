@@ -27,13 +27,10 @@ body {
 
 .grid {
     display: grid;
-
     font-size: 18px;
     max-width: 1290px;
     margin: 0 auto;
-
-
-    grid-template-rows: 117px 229px 163px 104px auto;
+    grid-template-rows: 117px 180px 163px 104px auto;
     grid-template-columns: 48px 5fr 7fr 48px;
     grid-gap: 1px;
     grid-template-areas:
@@ -159,5 +156,23 @@ body {
 
     span {
         color: #fada50;
+    }
+
+    @media (min-width: 700px) and (max-width: 1300px) {
+        .grid {
+            // display: grid;
+            // font-size: 18px;
+            // max-width: 1290px;
+            // margin: 0 auto;
+            // grid-template-rows: 117px 180px 163px 104px auto;
+            // grid-template-columns: 48px 5fr 7fr 48px;
+            // grid-gap: 1px;
+            grid-template-areas:
+                "indent-left   logo     title   indent-right"
+                "indent-left   nav      nav     indent-right"
+                "indent-left   content  image   indent-right"
+                "indent-left   button   image   indent-right"
+                "indent-left   social   image   indent-right";
+        }
     }
 }
