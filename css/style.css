@@ -19,7 +19,7 @@ body {
   grid-template-rows: 117px 180px 163px 104px auto;
   grid-template-columns: 48px 5fr 7fr 48px;
   grid-gap: 1px;
-  grid-template-areas: "indent-left   logo     title   indent-right" "indent-left   nav      nav     indent-right" "indent-left   content  image   indent-right" "indent-left   button   image   indent-right" "indent-left   social   image   indent-right";
+  grid-template-areas: "indent-left   logo     nav     indent-right" "indent-left   title    image   indent-right" "indent-left   content  image   indent-right" "indent-left   button   image   indent-right" "indent-left   social   image   indent-right";
 }
 .indent-left .indent-right {
   grid-area: indent;
@@ -121,7 +121,27 @@ body {
   color: #fada50;
 }
 @media (max-width: 1290px) {
-  .content {
-    color: red;
+  .grid {
+    grid-template-rows: 117px 100px 250px 104px auto;
+    grid-template-columns: 48px 5fr 7fr 48px;
+    grid-template-areas: "indent-left   logo     title   indent-right" "indent-left   nav      nav     indent-right" "indent-left   content  image   indent-right" "indent-left   button   image   indent-right" "indent-left   social   image   indent-right";
+  }
+  .title {
+    justify-self: end;
+  }
+  .nav {
+    align-self: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .nav p {
+    margin: 0px;
+    text-decoration: underline;
+  }
+  .image {
+    grid-area: image;
+    margin-top: 0;
+    justify-self: start;
+    align-self: start;
   }
 }
