@@ -145,3 +145,46 @@ body {
     align-self: start;
   }
 }
+@media (max-width: 1070px) {
+  .grid {
+    grid-template-rows: 76px 79px 121px auto auto 104px 64px;
+    grid-template-columns: 48px auto 48px;
+    grid-template-areas: "indent-left  logo     indent-right" "indent-left  title    indent-right" "indent-left  nav      indent-right" "indent-left  image    indent-right" "indent-left  button   indent-right" "indent-left  content  indent-right" "indent-left  social   indent-right";
+  }
+  .title {
+    font-size: 48px;
+    justify-self: center;
+    align-self: end;
+  }
+  .logo {
+    font-size: 28px;
+    justify-self: center;
+    align-self: end;
+  }
+  .nav {
+    font-size: 18px;
+    justify-content: space-around;
+    align-self: center;
+  }
+  .image {
+    justify-self: center;
+    align-self: start;
+    width: 1fr;
+  }
+  .block-button {
+    justify-self: center;
+  }
+  .content {
+    align-self: center;
+    text-align: center;
+  }
+  .social {
+    justify-self: center;
+    align-self: center;
+  }
+  .social img {
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 0;
+  }
+}
