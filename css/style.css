@@ -12,14 +12,20 @@ body {
   min-height: 100vh;
 }
 .grid {
+  min-width: 250px;
   display: grid;
   font-size: 18px;
   max-width: 1290px;
   margin: 0 auto;
   grid-template-rows: 117px 180px 163px 104px auto;
   grid-template-columns: 48px 5fr 7fr 48px;
-  grid-gap: 1px;
+  grid-gap: 0px;
   grid-template-areas: "indent-left   logo     nav     indent-right" "indent-left   title    image   indent-right" "indent-left   content  image   indent-right" "indent-left   button   image   indent-right" "indent-left   social   image   indent-right";
+}
+.btn-menu {
+  grid-area: btn-menu;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: none;
 }
 .indent-left .indent-right {
   grid-area: indent;
@@ -120,11 +126,14 @@ body {
 .footer span {
   color: #fada50;
 }
-@media (max-width: 1290px) {
+@media (max-width: 1290px) and (min-width: 1071px) {
   .grid {
     grid-template-rows: 117px 100px 250px 104px auto;
     grid-template-columns: 48px 5fr 7fr 48px;
     grid-template-areas: "indent-left   logo     title   indent-right" "indent-left   nav      nav     indent-right" "indent-left   content  image   indent-right" "indent-left   button   image   indent-right" "indent-left   social   image   indent-right";
+  }
+  .btn-menu {
+    display: none;
   }
   .title {
     justify-self: end;
@@ -145,11 +154,14 @@ body {
     align-self: start;
   }
 }
-@media (max-width: 1070px) {
+@media (max-width: 1070px) and (min-width: 831px) {
   .grid {
     grid-template-rows: 76px 79px 121px auto auto 104px 64px;
     grid-template-columns: 48px auto 48px;
     grid-template-areas: "indent-left  logo     indent-right" "indent-left  title    indent-right" "indent-left  nav      indent-right" "indent-left  image    indent-right" "indent-left  button   indent-right" "indent-left  content  indent-right" "indent-left  social   indent-right";
+  }
+  .btn-menu {
+    display: none;
   }
   .title {
     font-size: 48px;
@@ -165,6 +177,7 @@ body {
     font-size: 18px;
     justify-content: space-around;
     align-self: center;
+    justify-self: normal;
   }
   .image {
     justify-self: center;
@@ -177,6 +190,60 @@ body {
   .content {
     align-self: center;
     text-align: center;
+  }
+  .social {
+    justify-self: center;
+    align-self: center;
+  }
+  .social img {
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 830px) {
+  .grid {
+    grid-template-rows: 50px 50px auto auto auto 72px;
+    grid-template-columns: 10px 100px auto 10px;
+    grid-template-areas: "indent-left  btn-menu  logo     indent-right" "indent-left  btn-menu  title    indent-right" "indent-left  image     image    indent-right" "indent-left  button    button   indent-right" "indent-left  content   content  indent-right" "indent-left  social    social   indent-right";
+  }
+  .btn-menu {
+    display: inline-block;
+    align-self: end;
+    justify-self: center;
+    padding-bottom: 7px;
+  }
+  .nav {
+    display: none;
+  }
+  .title {
+    font-size: 48px;
+    justify-self: start;
+    align-self: end;
+  }
+  .logo {
+    font-size: 28px;
+    justify-self: start;
+    align-self: end;
+  }
+  .image {
+    justify-self: center;
+    align-self: end;
+    max-width: 100%;
+  }
+  .image img {
+    max-width: 100%;
+  }
+  .block-button {
+    justify-self: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .content {
+    align-self: center;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
   .social {
     justify-self: center;
